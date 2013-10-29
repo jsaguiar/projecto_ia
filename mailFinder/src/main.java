@@ -88,10 +88,10 @@ public class main {
         Message [] messages = inbox.getMessages();
         String message;
         for (Message m : messages) {
-             message = getText( m);
+            message = getText( m);
             System.out.println("#####################");
             System.out.println("IS HTML: " + textIsHtml);
-            System.out.println("From: " + m.);
+            //System.out.println("From: " + m.);
             System.out.println("mail: " + message);
             System.out.println("#####################");
             System.out.println(" ");
