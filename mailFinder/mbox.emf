@@ -64,7 +64,7 @@
       <X-FCTUC-DEI-SIC-MailScanner-From>mercado-bounces@dei.uc.pt</X-FCTUC-DEI-SIC-MailScanner-From>
     </mstor:headers>
   </mstor:message>
-  <mstor:last-uid>75</mstor:last-uid>
+  <mstor:last-uid>128</mstor:last-uid>
   <mstor:message messageNumber="2" uid="2">
     <mstor:expunged />
     <mstor:flags />
@@ -4535,5 +4535,214 @@
       <X-FCTUC-DEI-SIC-MailScanner-From>mercado-bounces@dei.uc.pt</X-FCTUC-DEI-SIC-MailScanner-From>
     </mstor:headers>
   </mstor:message>
+  <mstor:message messageNumber="76" uid="76">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="77" uid="77">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="78" uid="78">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="79" uid="79">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="80" uid="80">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="81" uid="81">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="82" uid="82">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="83" uid="83">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="84" uid="84">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="85" uid="85">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="86" uid="86">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="87" uid="87">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="88" uid="88">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="89" uid="89">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="90" uid="90">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="91" uid="91">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="92" uid="92">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="93" uid="93">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="94" uid="94">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="95" uid="95">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="96" uid="96">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="97" uid="97">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="98" uid="98">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="99" uid="99">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="100" uid="100">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="101" uid="101">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="102" uid="102">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="103" uid="103">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="104" uid="104">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="105" uid="105">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="106" uid="106">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="107" uid="107">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="108" uid="108">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="109" uid="109">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="110" uid="110">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="111" uid="111">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="112" uid="112">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="113" uid="113">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="114" uid="114">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="115" uid="115">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="116" uid="116">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="117" uid="117">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="118" uid="118">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="119" uid="119">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="120" uid="120">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="121" uid="121">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="122" uid="122">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="123" uid="123">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="124" uid="124">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="125" uid="125">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="126" uid="126">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="127" uid="127">
+    <mstor:expunged />
+    <mstor:flags />
+  </mstor:message>
+  <mstor:message messageNumber="128" uid="128" />
 </mstor:folder>
 

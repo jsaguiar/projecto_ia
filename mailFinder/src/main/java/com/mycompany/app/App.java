@@ -1,6 +1,7 @@
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.Properties;
 
 
@@ -29,26 +30,7 @@ public class App {
             return s;
         }
 
-     /*   if (p.isMimeType("multipart/alternative")) {
-            // prefer html text over plain text
-            Multipart mp = (Multipart)p.getContent();
-            String text = null;
-            for (int i = 0; i < mp.getCount(); i++) {
-                Part bp = mp.getBodyPart(i);
-                if (bp.isMimeType("text/plain")) {
-                    if (text == null)
-                        text = getText(bp);
-                    continue;
-                } else if (bp.isMimeType("text/html")) {
-                    String s = getText(bp);
-                    if (s != null)
-                        return s;
-                } else {
-                    return getText(bp);
-                }
-            }
-            return text;
-        } */else if (p.isMimeType("multipart/*")) {
+        else if (p.isMimeType("multipart/*")) {
             Multipart mp = (Multipart)p.getContent();
             for (int i = 0; i < mp.getCount(); i++) {
                 String s = getText(mp.getBodyPart(i));
@@ -109,21 +91,42 @@ public class App {
 
         Message [] messages = inbox.getMessages();
 
-        String current;
+        String body;
         String from;
+        String to;
+        String subject;
+        String date;
+
+        Calendar cal = Calendar.getInstance();
+
         int count = 0;
         for (Message m : messages) {
             count++;
 
-            current = getText(m);
+            body = getText(m);
+            to = getMail(InternetAddress.toString(m.getAllRecipients()).split(" "));
+            from = getMail(InternetAddress.toString(m.getReplyTo()).split(" "));
+            subject = m.getSubject();
 
-            from = getMail(InternetAddress.toString(m.getAllRecipients()).split(" "));
+            cal.setTime(m.getSentDate());
+
+            date = String.valueOf(cal.get(Calendar.DAY_OF_MONTH)) + "/"
+                    + String.valueOf(cal.get(Calendar.MONTH)+1) + "/"
+                    + String.valueOf(cal.get(Calendar.YEAR)) + " "
+                    + String.valueOf(cal.get(Calendar.HOUR_OF_DAY)) + ":"
+                    + String.valueOf(cal.get(Calendar.MINUTE)) + ":"
+                    + String.valueOf(cal.get(Calendar.SECOND));
 
 
             System.out.println("****************************");
-            System.out.println("nr: " + count);
+
+            System.out.println("Number: " + count);
             System.out.println("From: " + from);
-            System.out.println("mail: " + current);
+            System.out.println("To: " + to);
+            System.out.println("Subject: " + subject);
+            System.out.println("Body: " + body);
+            System.out.println("Date: " + date);
+
 
 
 
