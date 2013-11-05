@@ -1,22 +1,12 @@
+package com.mycompany.app;
 import javax.mail.*;
-import javax.mail.internet.InternetAddress;
 import java.io.IOException;
 import java.util.Properties;
-import java.util.regex.*;
 
 
 
-/**
- * Created with IntelliJ IDEA.
- * User: goncalodias
- * Date: 10/29/13
- * Time: 23:36
- * To change this template use File | Settings | File Templates.
- */
-public class fetchMail {
-
-
-
+public class App
+{
     static boolean textIsHtml = false;
 
     /**
@@ -62,25 +52,6 @@ public class fetchMail {
     }
 
 
-    static String getMail(String [] fields){
-
-        String mail;
-
-        for (int i = 0; i< fields.length; i++){
-            if(fields[i].contains("@")){
-                mail = fields[i];
-                if (mail.contains("<") || mail.contains("\"")) {
-                    mail = mail.substring(1,mail.length()-1);
-                }
-
-                return mail;
-            }
-        }
-
-        return "Not found";
-    }
-
-
 
     public static void main(String[] args) throws Exception {
 
@@ -99,7 +70,7 @@ public class fetchMail {
 
         Session session = Session.getDefaultInstance(new Properties());
 
-        Store store = session.getStore(new URLName("mstor:mbox"));
+        Store store = session.getStore(new URLName("mstor:/Users/joao/Desktop/INBOX.mbox/mbox"));
         store.connect();
 
         System.out.println(store.isConnected());
@@ -107,28 +78,19 @@ public class fetchMail {
         Folder inbox = store.getDefaultFolder();  // no subfolder here; even if there is an Inbox, I get the same thing...
         inbox.open(Folder.READ_ONLY);
 
-        Message [] messages = inbox.getMessages();
-
+        Part [] messages = inbox.getMessages();
         String current;
-        String from;
         int count = 0;
-        for (Message m : messages) {
+        for (Part m : messages) {
             count++;
-
             current = getText(m);
-
-            from = getMail(InternetAddress.toString(m.getAllRecipients()).split(" "));
-
-
-            System.out.println("****************************");
-            System.out.println("nr: " + count);
-            System.out.println("From: " + from);
-            System.out.println("mail: " + current);
-
-
-
+            System.out.println("nr: " + count + " mail: " + current);
             System.out.println(" ");
 
         }
     }
 }
+
+
+
+
