@@ -2,7 +2,6 @@ import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import java.io.IOException;
 import java.util.Properties;
-import java.util.regex.*;
 
 
 
@@ -20,7 +19,7 @@ public class App {
     static boolean textIsHtml = false;
 
     /**
-     * Return the primary text content of the message.
+     //     * Return the primary text content of the message.
      */
     static String getText(Part p) throws
             MessagingException, IOException {
@@ -66,14 +65,15 @@ public class App {
 
         String mail;
 
+
+
         for (int i = 0; i< fields.length; i++){
             if(fields[i].contains("@")){
                 mail = fields[i];
-                if (mail.contains("<") || mail.contains("\"")) {
-                    mail = mail.substring(1,mail.length()-1);
-                }
-
-                return mail;
+                mail = mail.replace("<","");
+                mail = mail.replace(">","");
+                mail = mail.replace("\"","");
+                return mail.replace(",","");
             }
         }
 
