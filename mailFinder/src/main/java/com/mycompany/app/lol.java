@@ -67,12 +67,16 @@ public class lol {
         reader.close();
     }
 
-    private static void addDoc(IndexWriter w, String title, String isbn) throws IOException {
+    private static void addDoc(IndexWriter w, String subject, String body, String date, String from, String to) throws IOException {
         Document doc = new Document();
-        doc.add(new TextField("title", title, Field.Store.YES));
+        doc.add(new TextField("", subject, Field.Store.YES));
+        doc.add(new TextField("", body, Field.Store.YES));
 
         // use a string field for isbn because we don't want it tokenized
-        doc.add(new StringField("isbn", isbn, Field.Store.YES));
+        doc.add(new StringField("date", date, Field.Store.YES));
+        doc.add(new StringField("from", from, Field.Store.YES));
+        doc.add(new StringField("to", to, Field.Store.YES));
+
         w.addDocument(doc);
     }
 }
