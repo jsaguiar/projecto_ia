@@ -1,3 +1,5 @@
+package com.mycompany.app;
+
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import java.io.IOException;
@@ -5,14 +7,6 @@ import java.util.Calendar;
 import java.util.Properties;
 
 
-
-/**
- * Created with IntelliJ IDEA.
- * User: goncalodias
- * Date: 10/29/13
- * Time: 23:36
- * To change this template use File | Settings | File Templates.
- */
 public class App {
 
 
@@ -99,6 +93,7 @@ public class App {
 
         Calendar cal = Calendar.getInstance();
 
+        Indexer index = new Indexer();
         for (Message m : messages) {
 
             body = getText(m);
@@ -119,13 +114,18 @@ public class App {
                 break;
             }
 
-            System.out.println("From: " + from);
+            index.addIndex(subject,body,date,from,to);
+            /*System.out.println("From: " + from);
             System.out.println("To: " + to);
             System.out.println("Subject: " + subject);
             System.out.println("Body: " + body);
-            System.out.println("Date: " + date);
+            System.out.println("Date: " + date);   */
 
 
         }
+
+        index.closeIndexer();
+        System.out.println("FINISH");
     }
+
 }
