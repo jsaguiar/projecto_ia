@@ -37,7 +37,7 @@ public class App {
             IndexSearcher searcher = new IndexSearcher(reader);
             TopScoreDocCollector collector = TopScoreDocCollector.create(5, true);
 
-            Query q = new QueryParser(Version.LUCENE_45, "date", analyzer).parse("30 10 2013");
+            Query q = new QueryParser(Version.LUCENE_45, "to", analyzer).parse("jaguiar");
             System.out.println(q);
 
             searcher.search(q, collector);
