@@ -99,9 +99,7 @@ public class App {
 
         Calendar cal = Calendar.getInstance();
 
-        int count = 0;
         for (Message m : messages) {
-            count++;
 
             body = getText(m);
             to = getMail(InternetAddress.toString(m.getAllRecipients()).split(" "));
@@ -117,20 +115,16 @@ public class App {
                     + String.valueOf(cal.get(Calendar.MINUTE)) + ":"
                     + String.valueOf(cal.get(Calendar.SECOND));
 
+            if(to.compareTo("Not found") == 0 || from.compareTo("Not found") == 0){
+                break;
+            }
 
-            System.out.println("****************************");
-
-            System.out.println("Number: " + count);
             System.out.println("From: " + from);
             System.out.println("To: " + to);
             System.out.println("Subject: " + subject);
             System.out.println("Body: " + body);
             System.out.println("Date: " + date);
 
-
-
-
-            System.out.println(" ");
 
         }
     }
