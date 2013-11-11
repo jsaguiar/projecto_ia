@@ -1,7 +1,20 @@
 package com.mycompany.app;
 
+import org.apache.lucene.analysis.standard.StandardAnalyzer;
+import org.apache.lucene.document.Document;
+import org.apache.lucene.index.DirectoryReader;
+import org.apache.lucene.index.IndexReader;
+import org.apache.lucene.queryparser.classic.QueryParser;
+import org.apache.lucene.search.IndexSearcher;
+import org.apache.lucene.search.Query;
+import org.apache.lucene.search.ScoreDoc;
+import org.apache.lucene.search.TopScoreDocCollector;
+import org.apache.lucene.store.FSDirectory;
+import org.apache.lucene.util.Version;
+import org.apache.lucene.analysis.standard.UAX29URLEmailTokenizer;
+
 import javax.mail.*;
-import javax.mail.internet.InternetAddress;
+import java.io.File;
 import java.io.IOException;
 import java.util.Calendar;
 import java.util.Properties;
@@ -94,7 +107,7 @@ public class App {
         Calendar cal = Calendar.getInstance();
 
         Indexer index = new Indexer();
-        for (Message m : messages) {
+       /* for (Message m : messages) {
 
             body = getText(m);
             to = getMail(InternetAddress.toString(m.getAllRecipients()).split(" "));
@@ -115,17 +128,46 @@ public class App {
             }
 
             index.addIndex(subject,body,date,from,to);
-            /*System.out.println("From: " + from);
+            System.out.println("From: " + from);
             System.out.println("To: " + to);
             System.out.println("Subject: " + subject);
             System.out.println("Body: " + body);
-            System.out.println("Date: " + date);   */
+            System.out.println("Date: " + date);
+
+        }     */
+
+        System.out.println("FINISH");
+        index.closeIndexer();
 
 
+        StandardAnalyzer analyzer = new StandardAnalyzer(Version.LUCENE_45);
+
+        try{
+            IndexReader reader = DirectoryReader.open(FSDirectory.open(new File("IndexerBD")));
+            IndexSearcher searcher = new IndexSearcher(reader);
+            TopScoreDocCollector collector = TopScoreDocCollector.create(5, true);
+
+            Query q = new QueryParser(Version.LUCENE_45, "data", analyzer).parse("30/09/2013");
+            System.out.println(q);
+
+            searcher.search(q, collector);
+            ScoreDoc[] hits = collector.topDocs().scoreDocs;
+
+            // 4. display results
+            System.out.println("Found " + hits.length + " hits.");
+            for(int i=0;i<hits.length;++i) {
+                int docId = hits[i].doc;
+                Document d = searcher.doc(docId);
+                System.out.println((i + 1) + ". " + d.get("from") + " score=" + hits[i].score);
+            }
+
+
+        }catch  (IOException e){
+            System.out.println("Error open file (search function)");
+        }catch (Exception e){
+            System.out.println("Error (search function)");
         }
 
-        index.closeIndexer();
-        System.out.println("FINISH");
     }
 
 }
