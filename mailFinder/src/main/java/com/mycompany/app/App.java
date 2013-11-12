@@ -27,7 +27,7 @@ public class App {
 
         //importar mails da caixa
         Mail mail = new Mail();
-        mail.importMail("mstor:mbox");
+        mail.importMail();
 
 
         WhitespaceAnalyzer analyzer = new WhitespaceAnalyzer(Version.LUCENE_45);

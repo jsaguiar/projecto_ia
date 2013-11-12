@@ -56,7 +56,7 @@ public class Mail {
     }
 
 
-    public void importMail(String mboxPath) throws Exception {
+    public void importMail() throws Exception {
 
         Properties props = new Properties();
         props.setProperty("mail.store.protocol", "pop3");
@@ -107,7 +107,7 @@ public class Mail {
                 }
 
                 index.addIndex(subject, body, date, from, to);
-                //System.out.println("From: " + from);
+                System.out.println("From: " + from);
                 // System.out.println("To: " + to);
 
                 //System.out.println("Subject: " + subject);
