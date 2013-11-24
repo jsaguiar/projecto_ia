@@ -26,8 +26,8 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         //importar mails da caixa
-        Mail mail = new Mail();
-        mail.importMail();
+       // Mail mail = new Mail();
+       // mail.importMail();
 
 
         WhitespaceAnalyzer analyzer = new WhitespaceAnalyzer(Version.LUCENE_45);
@@ -35,9 +35,9 @@ public class App {
         try{
             IndexReader reader = DirectoryReader.open(FSDirectory.open(new File("IndexerBD")));
             IndexSearcher searcher = new IndexSearcher(reader);
-            TopScoreDocCollector collector = TopScoreDocCollector.create(5, true);
+            TopScoreDocCollector collector = TopScoreDocCollector.create(10, true);
 
-            Query q = new QueryParser(Version.LUCENE_45, "to", analyzer).parse("jaguiar");
+            Query q = new QueryParser(Version.LUCENE_45, "body", analyzer).parse("cumprimentos");
             System.out.println(q);
 
             searcher.search(q, collector);

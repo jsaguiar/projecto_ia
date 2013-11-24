@@ -6,6 +6,7 @@ import javax.mail.internet.InternetAddress;
 import java.io.IOException;
 import java.util.Calendar;
 import java.util.Properties;
+import java.util.Scanner;
 
 
 public class Mail {
