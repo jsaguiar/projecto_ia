@@ -25,19 +25,19 @@ public class App {
 
     public static void main(String[] args) throws Exception {
 
-        //importar mails da caixa
-       // Mail mail = new Mail();
-       // mail.importMail();
+       //importar mails da caixa
+       Mail mail = new Mail();
+       mail.importMail();
 
 
-        WhitespaceAnalyzer analyzer = new WhitespaceAnalyzer(Version.LUCENE_45);
+        /*WhitespaceAnalyzer analyzer = new WhitespaceAnalyzer(Version.LUCENE_40);
 
         try{
             IndexReader reader = DirectoryReader.open(FSDirectory.open(new File("IndexerBD")));
             IndexSearcher searcher = new IndexSearcher(reader);
             TopScoreDocCollector collector = TopScoreDocCollector.create(10, true);
 
-            Query q = new QueryParser(Version.LUCENE_45, "body", analyzer).parse("cumprimentos");
+            Query q = new QueryParser(Version.LUCENE_40, "body", analyzer).parse("cumprimentos");
             System.out.println(q);
 
             searcher.search(q, collector);
@@ -51,12 +51,13 @@ public class App {
                 System.out.println((i + 1) + ". " + d.get("from") + " score=" + hits[i].score);
             }
 
+            reader.close();
 
         }catch  (IOException e){
             System.out.println("Error open file (search function)");
         }catch (Exception e){
             System.out.println("Error (search function)");
-        }
+        }    */
 
     }
 
