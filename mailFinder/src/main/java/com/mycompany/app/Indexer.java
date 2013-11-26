@@ -5,10 +5,7 @@ import org.apache.lucene.analysis.core.WhitespaceAnalyzer;
 import org.apache.lucene.analysis.standard.UAX29URLEmailTokenizer;
 
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
-import org.apache.lucene.document.Document;
-import org.apache.lucene.document.Field;
-import org.apache.lucene.document.StringField;
-import org.apache.lucene.document.TextField;
+import org.apache.lucene.document.*;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
@@ -32,7 +29,7 @@ import java.util.ArrayList;
 public class Indexer {
     private IndexWriter writer;
     private IndexSearcher searcher;
-    private static WhitespaceAnalyzer analyzer = new WhitespaceAnalyzer(Version.LUCENE_40);
+    private static WhitespaceAnalyzer analyzer = new WhitespaceAnalyzer(Version.LUCENE_45);
     MessageDigest md;
 
     private static String path = "IndexerBD";
@@ -41,7 +38,7 @@ public class Indexer {
         try {
             FSDirectory dir = FSDirectory.open(new File(path));
 
-            IndexWriterConfig config = new IndexWriterConfig(Version.LUCENE_40, analyzer);
+            IndexWriterConfig config = new IndexWriterConfig(Version.LUCENE_45, analyzer);
             config.setOpenMode(IndexWriterConfig.OpenMode.CREATE);
 
             md = MessageDigest.getInstance("MD5");
@@ -57,9 +54,7 @@ public class Indexer {
 
     }
 
-    public void addIndex(String subject, String body, String date, String from, String to) throws IOException {
-
-
+    public void addIndex(String subject, String body, String date, String from, String to, int polarity) throws IOException {
 
 
         try {
@@ -84,11 +79,11 @@ public class Indexer {
                 searcher = new IndexSearcher(reader);
 
 
-                QueryParser parser = new QueryParser(Version.LUCENE_33, "hash", analyzer);
+                QueryParser parser = new QueryParser(Version.LUCENE_45, "hash", analyzer);
                 parser.setDefaultOperator(QueryParser.AND_OPERATOR);
                 Query q1 =parser.parse(hash);
 
-                parser = new QueryParser(Version.LUCENE_33, "from", analyzer);
+                parser = new QueryParser(Version.LUCENE_45, "from", analyzer);
                 parser.setDefaultOperator(QueryParser.AND_OPERATOR);
                 Query q2 = parser.parse(from);
 
@@ -122,6 +117,7 @@ public class Indexer {
                 doc.add(new StringField("date", date, Field.Store.YES));
                 doc.add(new StringField("from", from, Field.Store.YES));
                 doc.add(new StringField("to", to, Field.Store.YES));
+                doc.add(new IntField("polarity", polarity, Field.Store.YES));
                 doc.add(new StringField("hash", hash, Field.Store.YES));
 
                 Term aux = new Term(body);
@@ -144,7 +140,7 @@ public class Indexer {
 
             TopScoreDocCollector collector = TopScoreDocCollector.create(5, true);
 
-            Query q = new QueryParser(Version.LUCENE_40, "body", analyzer).parse(s);
+            Query q = new QueryParser(Version.LUCENE_45, "body", analyzer).parse(s);
             searcher.search(q, collector);
             ScoreDoc[] hits = collector.topDocs().scoreDocs;
 

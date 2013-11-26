@@ -1,12 +1,13 @@
 package com.mycompany.app;
 
 
+import org.apache.lucene.document.DateTools;
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import java.io.IOException;
-import java.util.Calendar;
+import java.util.Date;
+import java.text.SimpleDateFormat;
 import java.util.Properties;
-import java.util.Scanner;
 
 
 public class Mail {
@@ -72,9 +73,15 @@ public class Mail {
             String from;
             String to;
             String subject;
-            String date;
+            Date date;
+            String sDate;
+            String bodyAux;
+            String category;
+            int polarity;
+            int pos=0,neg=0,neu=0;
 
-            Calendar cal = Calendar.getInstance();
+
+            Polarity mailPolarity = new Polarity("SentiLex");
 
             System.out.println("Start Importing....");
             Indexer index = new Indexer();
@@ -83,6 +90,16 @@ public class Mail {
 
                 from = "";
                 body = getText(m);
+                bodyAux=body;
+
+
+                bodyAux = bodyAux.toLowerCase();
+
+                bodyAux=bodyAux.replaceAll("[^a-zA-Z]"," ");
+
+
+                Analyzer analyzer = new Analyzer();
+
 
 
                 Address[] in = m.getFrom();
@@ -92,34 +109,66 @@ public class Mail {
                 to = getMail(InternetAddress.toString(m.getAllRecipients()));
                 subject = m.getSubject();
 
-                cal.setTime(m.getSentDate());
 
-                date = String.valueOf(cal.get(Calendar.DAY_OF_MONTH)) + "/"
-                        + String.valueOf(cal.get(Calendar.MONTH) + 1) + "/"
-                        + String.valueOf(cal.get(Calendar.YEAR)) + " "
-                        + String.valueOf(cal.get(Calendar.HOUR_OF_DAY)) + ":"
-                        + String.valueOf(cal.get(Calendar.MINUTE)) + ":"
-                        + String.valueOf(cal.get(Calendar.SECOND));
+                category = analyzer.analyzeTerm(mailPolarity, bodyAux);
+
+
+
+                date = m.getSentDate();
+
+                SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd-MM-yyyy:hh:mm:ss");
+                sDate = DATE_FORMAT.format(date);
+
+                sDate = DateTools.dateToString(date, DateTools.Resolution.SECOND);
 
 
                 if (to.compareTo("Not found") == 0 || from.isEmpty()) {
-                    System.out.println(to);
                     continue;
                 }
 
-                index.addIndex(subject, body, date, from, to);
-                System.out.println("From: " + from);
+                a++;
+
+                System.out.println(a);
+                if(a>=122 && a<=133){
+                    System.out.println("Body: " + body);
+
+                }
+
+                if (category.compareTo("Positivos")==0){
+                    polarity=1;
+                    pos++;
+                }
+                else if(category.compareTo("Negativos")==0){
+                    polarity=-1;
+
+                    neg++;
+                }
+                else {
+                    polarity=0;
+
+                    neu++;
+                }
+
+
+                index.addIndex(subject, body, sDate, from, to, polarity);
+                //System.out.println("From: " + from);
                 // System.out.println("To: " + to);
 
                 //System.out.println("Subject: " + subject);
                 //System.out.println("Body: " + body);
-                //System.out.println("Date: " + date);
+                //System.out.println("Date: " + sDate);
+                System.out.println("Polarity: " + category);
 
-                a++;
+
+                System.out.println("#######################################");
+
+
+
 
             }
-            System.out.println(a);
             index.closeIndexer();
+            System.out.println("Positivos: " + pos + "\n" + "Negativos: " + neg + "\n" + "Neutros: " + neu);
+
             System.out.println("Finished");
         } catch (Exception mex) {
             mex.printStackTrace();
