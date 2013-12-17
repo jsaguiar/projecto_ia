@@ -118,8 +118,9 @@ public class Mail {
                 }
 
 
+                Email email= new Email( body, sDate, polarity, from, to, subject) ;
 
-                index.addIndex(subject, body, sDate, from, to, polarity);
+                index.addIndex(email,"");
 
                 System.out.println("#######################################");
 
