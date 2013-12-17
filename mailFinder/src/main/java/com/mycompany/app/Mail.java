@@ -76,16 +76,12 @@ public class Mail {
             Date date;
             String sDate;
             String bodyAux;
-            String category;
             int polarity;
-            int pos=0,neg=0,neu=0;
 
 
-            Polarity mailPolarity = new Polarity("SentiLex");
 
             System.out.println("Start Importing....");
             Indexer index = new Indexer();
-            int a = 0;
             for (Message m : messages) {
 
                 from = "";
@@ -95,11 +91,11 @@ public class Mail {
 
                 bodyAux = bodyAux.toLowerCase();
 
-                bodyAux=bodyAux.replaceAll("[^a-zA-Z]"," ");
+                bodyAux=bodyAux.replaceAll(",", "");
 
+                HashOps polOps = new HashOps();
 
-                Analyzer analyzer = new Analyzer();
-
+                polarity= polOps.getPolarity(bodyAux);
 
 
                 Address[] in = m.getFrom();
@@ -108,11 +104,6 @@ public class Mail {
                 }
                 to = getMail(InternetAddress.toString(m.getAllRecipients()));
                 subject = m.getSubject();
-
-
-                category = analyzer.analyzeTerm(mailPolarity, "feio 1213442 asasas mau porco");
-
-
 
                 date = m.getSentDate();
 
@@ -126,39 +117,9 @@ public class Mail {
                     continue;
                 }
 
-                a++;
-
-                System.out.println(a);
-                if(a>=122 && a<=133){
-                    System.out.println("Body: " + body);
-
-                }
-
-                if (category.compareTo("Positivos")==0){
-                    polarity=1;
-                    pos++;
-                }
-                else if(category.compareTo("Negativos")==0){
-                    polarity=-1;
-
-                    neg++;
-                }
-                else {
-                    polarity=0;
-
-                    neu++;
-                }
 
 
                 index.addIndex(subject, body, sDate, from, to, polarity);
-                //System.out.println("From: " + from);
-                // System.out.println("To: " + to);
-
-                //System.out.println("Subject: " + subject);
-                //System.out.println("Body: " + body);
-                //System.out.println("Date: " + sDate);
-                System.out.println("Polarity: " + category);
-
 
                 System.out.println("#######################################");
 
@@ -167,7 +128,6 @@ public class Mail {
 
             }
             index.closeIndexer();
-            System.out.println("Positivos: " + pos + "\n" + "Negativos: " + neg + "\n" + "Neutros: " + neu);
 
             System.out.println("Finished");
         } catch (Exception mex) {
