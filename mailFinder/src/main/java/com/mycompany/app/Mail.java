@@ -110,7 +110,7 @@ public class Mail {
                 subject = m.getSubject();
 
 
-                category = analyzer.analyzeTerm(mailPolarity, bodyAux);
+                category = analyzer.analyzeTerm(mailPolarity, "feio 1213442 asasas mau porco");
 
 
 
