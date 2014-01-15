@@ -77,6 +77,7 @@ public class Mail {
             String sDate;
             String bodyAux;
             int polarity;
+            int id=0;
 
 
 
@@ -84,6 +85,7 @@ public class Mail {
             Indexer index = new Indexer();
             for (Message m : messages) {
 
+                id++;
                 from = "";
                 body = getText(m);
                 bodyAux=body;
@@ -118,7 +120,7 @@ public class Mail {
                 }
 
 
-                Email email= new Email( body, sDate, polarity, from, to, subject) ;
+                Email email= new Email(id,body, sDate, polarity, from, to, subject) ;
 
                 index.addIndex(email,"");
 

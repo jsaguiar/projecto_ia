@@ -131,6 +131,7 @@ public class Indexer {
             if (hits==null || hits.length == 0) {
                 System.out.println("add");
                 Document doc = new Document();
+                doc.add(new IntField("id", email.getId(), Field.Store.YES));
                 doc.add(new TextField("subject", email.getSubject(), Field.Store.YES));
                 doc.add(new TextField("body", email.getBody(), Field.Store.YES));
 
@@ -169,7 +170,7 @@ public class Indexer {
             for (int i=0; i<reader.maxDoc(); i++) {
                 Document doc = reader.document(i);
 
-                Email email= new Email(doc.get("body"), doc.get("date"),  Integer.parseInt(doc.get("polarity")), doc.get("from"), doc.get("to"), doc.get("subject"));
+                Email email= new Email(Integer.parseInt(doc.get("id")),doc.get("body"), doc.get("date"),  Integer.parseInt(doc.get("polarity")), doc.get("from"), doc.get("to"), doc.get("subject"));
 
                 aux.add(email);
 

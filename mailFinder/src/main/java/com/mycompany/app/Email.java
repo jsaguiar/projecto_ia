@@ -8,15 +8,16 @@ package com.mycompany.app;
  * To change this template use File | Settings | File Templates.
  */
 public class Email {
+    private int id;
     private String subject;
     private String body;
     private String date;
-
     private String from;
     private String to;
     private int polarity;
 
-    public Email(String body, String date, int polarity, String from, String to, String subject) {
+    public Email(int id, String body, String date, int polarity, String from, String to, String subject) {
+        this.id = id;
         this.body = body;
         this.date = date;
         this.polarity = polarity;
@@ -24,6 +25,17 @@ public class Email {
         this.to = to;
         this.subject = subject;
     }
+
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
 
 
     public String getBody() {

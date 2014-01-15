@@ -48,13 +48,20 @@ public class HashOps {
         for(int i = 0; i<words.length; i++){
 
             if(polTable.containsKey(words[i])){
+                System.out.println("palavra: " + words[i]);
                 if(polTable.get(words[i])==1){
+                    System.out.println("Positiva");
+
                     positive++;
                 }
                 else if (polTable.get(words[i])==0){
+                    System.out.println("Neutra");
+
                     neutral++;
                 }
                 else{
+                    System.out.println("Negativa");
+
                     negative++;
                 }
 
