@@ -2,6 +2,7 @@ package com.mycompany.app;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.lucene.analysis.core.WhitespaceAnalyzer;
+import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.*;
 import org.apache.lucene.index.*;
 import org.apache.lucene.queryparser.classic.QueryParser;
@@ -20,7 +21,7 @@ import java.util.ArrayList;
 public class Indexer {
     private IndexWriter writer;
     private IndexSearcher searcher;
-    private static WhitespaceAnalyzer analyzer = new WhitespaceAnalyzer(Version.LUCENE_45);
+    private static StandardAnalyzer analyzer = new StandardAnalyzer(Version.LUCENE_45);
     MessageDigest md;
 
     private static String path = "IndexerBD";
