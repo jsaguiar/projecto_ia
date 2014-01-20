@@ -2,6 +2,7 @@ package com.mycompany.app;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.lucene.analysis.core.WhitespaceAnalyzer;
+import org.apache.lucene.analysis.pt.PortugueseAnalyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.*;
 import org.apache.lucene.index.*;
@@ -21,7 +22,7 @@ import java.util.ArrayList;
 public class Indexer {
     private IndexWriter writer;
     private IndexSearcher searcher;
-    private static StandardAnalyzer analyzer = new StandardAnalyzer(Version.LUCENE_45);
+    private static PortugueseAnalyzer ptAnalyzer = new PortugueseAnalyzer(Version.LUCENE_40);
     MessageDigest md;
 
     private static String path = "IndexerBD";
@@ -30,7 +31,7 @@ public class Indexer {
         try {
             FSDirectory dir = FSDirectory.open(new File(path));
 
-            IndexWriterConfig config = new IndexWriterConfig(Version.LUCENE_45, analyzer);
+            IndexWriterConfig config = new IndexWriterConfig(Version.LUCENE_45, ptAnalyzer);
             config.setOpenMode(IndexWriterConfig.OpenMode.CREATE);
 
             md = MessageDigest.getInstance("MD5");
@@ -53,7 +54,7 @@ public class Indexer {
 
             FSDirectory dir = FSDirectory.open(new File(this.path));
 
-            IndexWriterConfig config = new IndexWriterConfig(Version.LUCENE_45, analyzer);
+            IndexWriterConfig config = new IndexWriterConfig(Version.LUCENE_45, ptAnalyzer);
             config.setOpenMode(IndexWriterConfig.OpenMode.CREATE);
 
             md = MessageDigest.getInstance("MD5");
@@ -109,7 +110,7 @@ public class Indexer {
 
 
 
-                Query q = new QueryParser(Version.LUCENE_45, "hash", analyzer).parse(hash);
+                Query q = new QueryParser(Version.LUCENE_45, "hash", ptAnalyzer).parse(hash);
                 System.out.println(q);
                 TopScoreDocCollector collector = TopScoreDocCollector.create(10, true);
 
@@ -143,13 +144,19 @@ public class Indexer {
                 doc.add(new StringField("to", email.getTo(), Field.Store.YES));
                 doc.add(new IntField("polarity", email.getPolarity(), Field.Store.YES));
                 doc.add(new StringField("hash", hash, Field.Store.YES));
+
                 if  (!categories.isEmpty()){
                     doc.add(new StringField("categories", categories, Field.Store.YES));
                 }
+
+                doc.add(new TextField("all", email.getSubject()+" "+email.getBody()+" "+email.getFrom(),Field.Store.YES));
+
                 Term aux = new Term(email.getBody());
 
                 writer.updateDocument(aux, doc);
                 System.out.println(writer.numDocs());
+
+
 
             } else {
                 System.out.println("Duplicado");
@@ -220,7 +227,7 @@ public class Indexer {
 
             TopScoreDocCollector collector = TopScoreDocCollector.create(5, true);
 
-            Query q = new QueryParser(Version.LUCENE_45, "body", analyzer).parse(s);
+                Query q = new QueryParser(Version.LUCENE_45, "body", ptAnalyzer).parse(s);
             searcher.search(q, collector);
             ScoreDoc[] hits = collector.topDocs().scoreDocs;
 
