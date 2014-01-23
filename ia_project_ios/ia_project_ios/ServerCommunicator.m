@@ -10,7 +10,7 @@
 #import "ServerCommunicatorDelegate.h"
 #import "email.h"
 
-#define URL @"http://192.168.1.6:8983/solr/collection1/"
+#define URL @"http://169.254.238.131:8983/solr/collection1/"
 
 
 @implementation ServerCommunicator
@@ -71,8 +71,19 @@
 
 
 -(void) getSimpleSearchWithString:(NSString*) aux{
-    NSString *query=[NSString stringWithFormat:@"select?q=subject:\"%@\" OR body:\"%@\" OR date:\"%@\" OR from:\"%@\"",aux,aux,aux,aux];
+    NSArray *splited= [aux componentsSeparatedByString:@" "];
     
+    NSString *formatQuery;
+    if(splited.count>0){
+        formatQuery=[NSString stringWithFormat:@"all:\"%@\"",splited[0]];
+        for (int i=1; i<splited.count; i++) {
+            formatQuery=[NSString stringWithFormat:@"%@+all:\"%@\"",formatQuery,splited[i]];
+        }
+    }
+    
+    NSLog(@"%@",formatQuery);
+    NSString *query=[NSString stringWithFormat:@"select?q=%@",formatQuery];
+    NSLog(@"%@",query);
     
     NSLog(@"GET MAILS QUERY\n%@\n\n",query);
     query = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(

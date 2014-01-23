@@ -23,5 +23,4 @@
 @property (strong, nonatomic) DetailViewController *detailViewController;
 @property ServerManager *manager;
 @property (strong, nonatomic) NSArray *emails;
-
 @end

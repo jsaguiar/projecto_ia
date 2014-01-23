@@ -339,7 +339,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37A-Da-Tk8">
-                                <rect key="frame" x="20" y="192" width="669" height="541"/>
+                                <rect key="frame" x="20" y="192" width="669" height="556"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -353,20 +353,78 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Ku-UM-SEG">
-                                <rect key="frame" x="20" y="192" width="669" height="551"/>
+                                <rect key="frame" x="20" y="192" width="669" height="556"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Olr-wW-pCO">
+                                <rect key="frame" x="665" y="441" width="38" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="left_button.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="right_button.png"/>
+                                <state key="highlighted" image="right_button.png"/>
+                                <connections>
+                                    <action selector="touchRecommendation:" destination="UmK-T2-kIZ" eventType="touchUpInside" id="bVX-dT-Jq8"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6DX-uO-mIc" customClass="ILTranslucentView">
+                                <rect key="frame" x="703" y="183" width="215" height="585"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fdp-71-d6k">
+                                        <rect key="frame" x="0.0" y="0.0" width="215" height="585"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="RecCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RecCell" textLabel="cIp-aZ-Y8B" detailTextLabel="cym-OO-A7q" style="IBUITableViewCellStyleSubtitle" id="LST-4a-jBt">
+                                                <rect key="frame" x="0.0" y="22" width="215" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LST-4a-jBt" id="6Up-KM-V6h">
+                                                    <rect key="frame" x="0.0" y="0.0" width="215" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cIp-aZ-Y8B">
+                                                            <rect key="frame" x="15" y="3" width="34" height="22"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cym-OO-A7q">
+                                                            <rect key="frame" x="15" y="25" width="43" height="15"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <sections/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="UmK-T2-kIZ" id="toS-ph-OEB"/>
+                                            <outlet property="delegate" destination="UmK-T2-kIZ" id="c73-Mp-KvB"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Mail" id="ybd-N1-gOT"/>
                     <connections>
                         <outlet property="bodyTextField" destination="37A-Da-Tk8" id="VLm-vw-vx9"/>
+                        <outlet property="btnRecommendation" destination="Olr-wW-pCO" id="8v0-ND-xhr"/>
                         <outlet property="dateLabel" destination="QkQ-li-GZY" id="YVj-OC-3HZ"/>
                         <outlet property="fromLabel" destination="8xu-QC-gYP" id="vIn-Je-x1t"/>
+                        <outlet property="recommendationTable" destination="fdp-71-d6k" id="osR-7L-TUv"/>
+                        <outlet property="recommendationView" destination="6DX-uO-mIc" id="2ue-Dp-qOu"/>
                         <outlet property="subjectLabel" destination="M7n-UC-KMH" id="66u-ut-Sd1"/>
                         <outlet property="toLabel" destination="BUG-Hx-9jh" id="vIz-dp-C2F"/>
                         <outlet property="webview" destination="5Ku-UM-SEG" id="pYv-7N-Zbr"/>
@@ -377,6 +435,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <point key="canvasLocation" x="448" y="248"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="left_button.png" width="12" height="20"/>
+        <image name="right_button.png" width="12" height="20"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackOpaque"/>
         <simulatedOrientationMetrics key="orientation"/>

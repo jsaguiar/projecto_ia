@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ia_project_ios/DetailViewController.m"
-            timestampString = "411938394.821396"
+            timestampString = "412039702.094711"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "225"
-            endingLineNumber = "225">
+            startingLineNumber = "445"
+            endingLineNumber = "445">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -40,11 +40,57 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ia_project_ios/DetailViewController.m"
-            timestampString = "411938394.821396"
+            timestampString = "412039702.094711"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "233"
-            endingLineNumber = "233">
+            startingLineNumber = "453"
+            endingLineNumber = "453">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ia_project_ios/DetailViewController.m"
+            timestampString = "412039702.094711"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "412"
+            endingLineNumber = "412"
+            landmarkName = "-scoringFuncion"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[DetailViewController scoringFuncion]"
+                  moduleName = "ia_project_ios"
+                  urlString = "file:///Users/joao/Desktop/ia_project_ios/ia_project_ios/DetailViewController.m"
+                  timestampString = "412026305.009701"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "430"
+                  endingLineNumber = "430"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[DetailViewController scoringFuncion]"
+                  moduleName = "ia_project_ios"
+                  urlString = "file:///Users/joao/Desktop/ia_project_ios/ia_project_ios/DetailViewController.m"
+                  timestampString = "412026305.011171"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "430"
+                  endingLineNumber = "430"
+                  offsetFromSymbolStart = "492">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

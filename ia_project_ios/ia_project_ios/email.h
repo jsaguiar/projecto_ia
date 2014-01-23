@@ -17,7 +17,7 @@
 @property (nonatomic, copy) NSString *from;
 @property (nonatomic, copy) NSString *to;
 @property (nonatomic, copy) NSString *polarity;
-@property (nonatomic, copy) NSString *categories;
-
+@property (nonatomic, copy) NSArray *categories;
+@property (nonatomic, copy) NSNumber *score;
 
 @end

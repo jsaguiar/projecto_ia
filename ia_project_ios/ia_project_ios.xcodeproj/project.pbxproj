@@ -27,8 +27,11 @@
 		CF61A88C18605C7B00264F49 /* ServerCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = CF61A88818605C7B00264F49 /* ServerCommunicator.m */; };
 		CF61A88D18605C7B00264F49 /* ServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF61A88A18605C7B00264F49 /* ServerManager.m */; };
 		CF61A89118605C9D00264F49 /* email.m in Sources */ = {isa = PBXBuildFile; fileRef = CF61A89018605C9D00264F49 /* email.m */; };
+		CF7A5496188E966A0044AE2B /* ILTranslucentView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7A5495188E966A0044AE2B /* ILTranslucentView.m */; };
 		CFAA603D188DA8EC003E6618 /* SearchWebView.js in Sources */ = {isa = PBXBuildFile; fileRef = CFAA603C188DA8EC003E6618 /* SearchWebView.js */; };
 		CFAA6040188DAA73003E6618 /* SearchWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAA603F188DAA73003E6618 /* SearchWebView.m */; };
+		CFAA6045188DB6A8003E6618 /* left_button.png in Resources */ = {isa = PBXBuildFile; fileRef = CFAA6041188DB6A8003E6618 /* left_button.png */; };
+		CFAA6047188DB6A8003E6618 /* right_button.png in Resources */ = {isa = PBXBuildFile; fileRef = CFAA6043188DB6A8003E6618 /* right_button.png */; };
 		FC73D47254164B2FB141FC10 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B27E7F5F36F04972A788B2F8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -78,9 +81,13 @@
 		CF61A88A18605C7B00264F49 /* ServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerManager.m; sourceTree = "<group>"; };
 		CF61A88F18605C9D00264F49 /* email.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = email.h; sourceTree = "<group>"; };
 		CF61A89018605C9D00264F49 /* email.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = email.m; sourceTree = "<group>"; };
+		CF7A5494188E966A0044AE2B /* ILTranslucentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILTranslucentView.h; sourceTree = "<group>"; };
+		CF7A5495188E966A0044AE2B /* ILTranslucentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILTranslucentView.m; sourceTree = "<group>"; };
 		CFAA603C188DA8EC003E6618 /* SearchWebView.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = SearchWebView.js; sourceTree = "<group>"; };
 		CFAA603E188DAA73003E6618 /* SearchWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchWebView.h; sourceTree = "<group>"; };
 		CFAA603F188DAA73003E6618 /* SearchWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchWebView.m; sourceTree = "<group>"; };
+		CFAA6041188DB6A8003E6618 /* left_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_button.png; sourceTree = "<group>"; };
+		CFAA6043188DB6A8003E6618 /* right_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right_button.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,12 +150,14 @@
 		CF61A85118605AD200264F49 /* ia_project_ios */ = {
 			isa = PBXGroup;
 			children = (
+				CF61A85D18605AD200264F49 /* Main.storyboard */,
+				CF61A88E18605C8700264F49 /* json */,
+				CF7A5494188E966A0044AE2B /* ILTranslucentView.h */,
+				CF7A5495188E966A0044AE2B /* ILTranslucentView.m */,
 				CF61A88F18605C9D00264F49 /* email.h */,
 				CF61A89018605C9D00264F49 /* email.m */,
-				CF61A88E18605C8700264F49 /* json */,
 				CF61A85A18605AD200264F49 /* AppDelegate.h */,
 				CF61A85B18605AD200264F49 /* AppDelegate.m */,
-				CF61A85D18605AD200264F49 /* Main.storyboard */,
 				CF61A86018605AD200264F49 /* MasterViewController.h */,
 				CF61A86118605AD200264F49 /* MasterViewController.m */,
 				CF5864391860AAE300A27852 /* AdvancedSearchViewController.h */,
@@ -167,6 +176,8 @@
 		CF61A85218605AD200264F49 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CFAA6041188DB6A8003E6618 /* left_button.png */,
+				CFAA6043188DB6A8003E6618 /* right_button.png */,
 				CF61A85318605AD200264F49 /* ia_project_ios-Info.plist */,
 				CF61A85418605AD200264F49 /* InfoPlist.strings */,
 				CF61A85718605AD200264F49 /* main.m */,
@@ -286,6 +297,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFAA6047188DB6A8003E6618 /* right_button.png in Resources */,
+				CFAA6045188DB6A8003E6618 /* left_button.png in Resources */,
 				CF61A86718605AD200264F49 /* Images.xcassets in Resources */,
 				CF61A85618605AD200264F49 /* InfoPlist.strings in Resources */,
 				CF61A85F18605AD200264F49 /* Main.storyboard in Resources */,
@@ -345,6 +358,7 @@
 				CFAA6040188DAA73003E6618 /* SearchWebView.m in Sources */,
 				CF61A89118605C9D00264F49 /* email.m in Sources */,
 				CF58643B1860AAE300A27852 /* AdvancedSearchViewController.m in Sources */,
+				CF7A5496188E966A0044AE2B /* ILTranslucentView.m in Sources */,
 				CFAA603D188DA8EC003E6618 /* SearchWebView.js in Sources */,
 				CF61A86218605AD200264F49 /* MasterViewController.m in Sources */,
 				CF61A85818605AD200264F49 /* main.m in Sources */,

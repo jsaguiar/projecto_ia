@@ -14349,3 +14349,172 @@ INFO  - 2014-01-20 19:12:35.060; org.apache.solr.core.SolrCore; [collection1] we
 INFO  - 2014-01-20 19:12:47.681; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={sort=date+desc&q=subject:"regards"+OR+body:"regards"+OR+date:"regards"+OR+from:"regards"&wt=json&rows=100000} hits=9 status=0 QTime=28 
 INFO  - 2014-01-20 19:19:56.779; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={sort=date+desc&q=*:*&wt=json&rows=100000} hits=395 status=0 QTime=4 
 INFO  - 2014-01-20 19:20:05.274; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={sort=date+desc&q=subject:"HTML"+OR+body:"HTML"+OR+date:"HTML"+OR+from:"HTML"&wt=json&rows=100000} hits=19 status=0 QTime=1 
+INFO  - 2014-01-20 19:50:08.280; org.eclipse.jetty.server.Server; jetty-8.1.10.v20130312
+INFO  - 2014-01-20 19:50:08.306; org.eclipse.jetty.deploy.providers.ScanningAppProvider; Deployment monitor /Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6 2.0/example/contexts at interval 0
+INFO  - 2014-01-20 19:50:08.313; org.eclipse.jetty.deploy.DeploymentManager; Deployable added: /Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6 2.0/example/contexts/solr-jetty-context.xml
+INFO  - 2014-01-20 19:50:09.492; org.eclipse.jetty.webapp.StandardDescriptorProcessor; NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+INFO  - 2014-01-20 19:50:09.529; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init()
+INFO  - 2014-01-20 19:50:09.550; org.apache.solr.core.SolrResourceLoader; JNDI not configured for solr (NoInitialContextEx)
+INFO  - 2014-01-20 19:50:09.550; org.apache.solr.core.SolrResourceLoader; solr home defaulted to 'solr/' (could not find system property or JNDI)
+INFO  - 2014-01-20 19:50:09.551; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: 'solr/'
+INFO  - 2014-01-20 19:50:09.690; org.apache.solr.core.ConfigSolr; Loading container configuration from /Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6 2.0/example/solr/solr.xml
+INFO  - 2014-01-20 19:50:09.882; org.apache.solr.core.ConfigSolrXml; Config-defined core root directory: 
+INFO  - 2014-01-20 19:50:09.917; org.apache.solr.core.CoreContainer; New CoreContainer 1459185606
+INFO  - 2014-01-20 19:50:09.918; org.apache.solr.core.CoreContainer; Loading cores into CoreContainer [instanceDir=solr/]
+INFO  - 2014-01-20 19:50:09.940; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting socketTimeout to: 0
+INFO  - 2014-01-20 19:50:09.941; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting urlScheme to: http://
+INFO  - 2014-01-20 19:50:09.941; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting connTimeout to: 0
+INFO  - 2014-01-20 19:50:09.941; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxConnectionsPerHost to: 20
+INFO  - 2014-01-20 19:50:09.945; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting corePoolSize to: 0
+INFO  - 2014-01-20 19:50:09.945; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maximumPoolSize to: 2147483647
+INFO  - 2014-01-20 19:50:09.945; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxThreadIdleTime to: 5
+INFO  - 2014-01-20 19:50:09.945; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting sizeOfQueue to: -1
+INFO  - 2014-01-20 19:50:09.946; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting fairnessPolicy to: false
+INFO  - 2014-01-20 19:50:10.120; org.apache.solr.logging.LogWatcher; SLF4J impl is org.slf4j.impl.Log4jLoggerFactory
+INFO  - 2014-01-20 19:50:10.121; org.apache.solr.logging.LogWatcher; Registering Log Listener [Log4j (org.slf4j.impl.Log4jLoggerFactory)]
+INFO  - 2014-01-20 19:50:10.160; org.apache.solr.core.CorePropertiesLocator; Looking for core definitions underneath /Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6 2.0/example/solr
+INFO  - 2014-01-20 19:50:10.178; org.apache.solr.core.CorePropertiesLocator; Found core collection1 in /Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6 2.0/example/solr/collection1/
+INFO  - 2014-01-20 19:50:10.178; org.apache.solr.core.CorePropertiesLocator; Found 1 core definitions
+INFO  - 2014-01-20 19:50:10.181; org.apache.solr.core.CoreContainer; Creating SolrCore 'collection1' using instanceDir: /Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6 2.0/example/solr/collection1
+INFO  - 2014-01-20 19:50:10.181; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: '/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6 2.0/example/solr/collection1/'
+INFO  - 2014-01-20 19:50:10.270; org.apache.solr.core.SolrConfig; Adding specified lib dirs to ClassLoader
+INFO  - 2014-01-20 19:50:10.272; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/extraction/lib/apache-mime4j-core-0.7.2.jar' to classloader
+INFO  - 2014-01-20 19:50:10.272; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/extraction/lib/apache-mime4j-dom-0.7.2.jar' to classloader
+INFO  - 2014-01-20 19:50:10.272; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/extraction/lib/bcmail-jdk15-1.45.jar' to classloader
+INFO  - 2014-01-20 19:50:10.273; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/extraction/lib/bcprov-jdk15-1.45.jar' to classloader
+INFO  - 2014-01-20 19:50:10.273; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/extraction/lib/boilerpipe-1.1.0.jar' to classloader
+INFO  - 2014-01-20 19:50:10.273; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/extraction/lib/commons-compress-1.4.1.jar' to classloader
+INFO  - 2014-01-20 19:50:10.273; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/extraction/lib/dom4j-1.6.1.jar' to classloader
+INFO  - 2014-01-20 19:50:10.274; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/extraction/lib/fontbox-1.8.1.jar' to classloader
+INFO  - 2014-01-20 19:50:10.274; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/extraction/lib/icu4j-49.1.jar' to classloader
+INFO  - 2014-01-20 19:50:10.274; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/extraction/lib/isoparser-1.0-RC-1.jar' to classloader
+INFO  - 2014-01-20 19:50:10.275; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/extraction/lib/jdom-1.0.jar' to classloader
+INFO  - 2014-01-20 19:50:10.275; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/extraction/lib/jempbox-1.8.1.jar' to classloader
+INFO  - 2014-01-20 19:50:10.275; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/extraction/lib/juniversalchardet-1.0.3.jar' to classloader
+INFO  - 2014-01-20 19:50:10.275; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/extraction/lib/metadata-extractor-2.6.2.jar' to classloader
+INFO  - 2014-01-20 19:50:10.276; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/extraction/lib/netcdf-4.2-min.jar' to classloader
+INFO  - 2014-01-20 19:50:10.276; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/extraction/lib/pdfbox-1.8.1.jar' to classloader
+INFO  - 2014-01-20 19:50:10.276; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/extraction/lib/poi-3.9.jar' to classloader
+INFO  - 2014-01-20 19:50:10.277; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/extraction/lib/poi-ooxml-3.9.jar' to classloader
+INFO  - 2014-01-20 19:50:10.277; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/extraction/lib/poi-ooxml-schemas-3.9.jar' to classloader
+INFO  - 2014-01-20 19:50:10.277; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/extraction/lib/poi-scratchpad-3.9.jar' to classloader
+INFO  - 2014-01-20 19:50:10.278; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/extraction/lib/rome-0.9.jar' to classloader
+INFO  - 2014-01-20 19:50:10.278; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/extraction/lib/tagsoup-1.2.1.jar' to classloader
+INFO  - 2014-01-20 19:50:10.278; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/extraction/lib/tika-core-1.4.jar' to classloader
+INFO  - 2014-01-20 19:50:10.279; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/extraction/lib/tika-parsers-1.4.jar' to classloader
+INFO  - 2014-01-20 19:50:10.279; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/extraction/lib/vorbis-java-core-0.1.jar' to classloader
+INFO  - 2014-01-20 19:50:10.279; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/extraction/lib/vorbis-java-tika-0.1.jar' to classloader
+INFO  - 2014-01-20 19:50:10.280; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/extraction/lib/xercesImpl-2.9.1.jar' to classloader
+INFO  - 2014-01-20 19:50:10.280; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/extraction/lib/xmlbeans-2.3.0.jar' to classloader
+INFO  - 2014-01-20 19:50:10.280; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/extraction/lib/xz-1.0.jar' to classloader
+INFO  - 2014-01-20 19:50:10.282; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/dist/solr-cell-4.6.0.jar' to classloader
+INFO  - 2014-01-20 19:50:10.283; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/clustering/lib/attributes-binder-1.2.0.jar' to classloader
+INFO  - 2014-01-20 19:50:10.286; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/clustering/lib/carrot2-mini-3.8.0.jar' to classloader
+INFO  - 2014-01-20 19:50:10.287; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/clustering/lib/hppc-0.5.2.jar' to classloader
+INFO  - 2014-01-20 19:50:10.294; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/clustering/lib/jackson-core-asl-1.7.4.jar' to classloader
+INFO  - 2014-01-20 19:50:10.294; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/clustering/lib/jackson-mapper-asl-1.7.4.jar' to classloader
+INFO  - 2014-01-20 19:50:10.294; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/clustering/lib/mahout-collections-1.0.jar' to classloader
+INFO  - 2014-01-20 19:50:10.295; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/clustering/lib/mahout-math-0.6.jar' to classloader
+INFO  - 2014-01-20 19:50:10.295; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/clustering/lib/simple-xml-2.7.jar' to classloader
+INFO  - 2014-01-20 19:50:10.298; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/dist/solr-clustering-4.6.0.jar' to classloader
+INFO  - 2014-01-20 19:50:10.299; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/langid/lib/jsonic-1.2.7.jar' to classloader
+INFO  - 2014-01-20 19:50:10.304; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/langid/lib/langdetect-1.1-20120112.jar' to classloader
+INFO  - 2014-01-20 19:50:10.309; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/dist/solr-langid-4.6.0.jar' to classloader
+INFO  - 2014-01-20 19:50:10.311; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/velocity/lib/commons-beanutils-1.7.0.jar' to classloader
+INFO  - 2014-01-20 19:50:10.311; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/velocity/lib/commons-collections-3.2.1.jar' to classloader
+INFO  - 2014-01-20 19:50:10.314; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/velocity/lib/velocity-1.7.jar' to classloader
+INFO  - 2014-01-20 19:50:10.315; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/contrib/velocity/lib/velocity-tools-2.0.jar' to classloader
+INFO  - 2014-01-20 19:50:10.316; org.apache.solr.core.SolrResourceLoader; Adding 'file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/dist/solr-velocity-4.6.0.jar' to classloader
+INFO  - 2014-01-20 19:50:10.499; org.apache.solr.update.SolrIndexConfig; IndexWriter infoStream solr logging is enabled
+INFO  - 2014-01-20 19:50:10.508; org.apache.solr.core.SolrConfig; Using Lucene MatchVersion: LUCENE_46
+INFO  - 2014-01-20 19:50:10.688; org.apache.solr.core.SolrConfig; Loaded SolrConfig: solrconfig.xml
+INFO  - 2014-01-20 19:50:10.695; org.apache.solr.schema.IndexSchema; Reading Solr Schema from schema.xml
+INFO  - 2014-01-20 19:50:10.823; org.apache.solr.schema.IndexSchema; [collection1] Schema name=example
+INFO  - 2014-01-20 19:50:11.501; org.apache.solr.schema.IndexSchema; default search field in schema is text
+INFO  - 2014-01-20 19:50:11.502; org.apache.solr.schema.IndexSchema; query parser default operator is AND
+INFO  - 2014-01-20 19:50:11.503; org.apache.solr.schema.IndexSchema; unique key field: id
+INFO  - 2014-01-20 19:50:11.589; org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2014-01-20 19:50:11.596; org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2014-01-20 19:50:11.756; org.apache.solr.core.SolrCore; solr.NRTCachingDirectoryFactory
+INFO  - 2014-01-20 19:50:11.764; org.apache.solr.core.SolrCore; [collection1] Opening new SolrCore at /Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6 2.0/example/solr/collection1/, dataDir=/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6 2.0/example/solr/collection1/data/
+INFO  - 2014-01-20 19:50:11.765; org.apache.solr.core.JmxMonitoredMap; No JMX servers found, not exposing Solr information with JMX.
+INFO  - 2014-01-20 19:50:11.770; org.apache.solr.core.SolrCore; [collection1] Added SolrEventListener for newSearcher: org.apache.solr.core.QuerySenderListener{queries=[]}
+INFO  - 2014-01-20 19:50:11.770; org.apache.solr.core.SolrCore; [collection1] Added SolrEventListener for firstSearcher: org.apache.solr.core.QuerySenderListener{queries=[{q=static firstSearcher warming in solrconfig.xml}]}
+INFO  - 2014-01-20 19:50:11.784; org.apache.solr.core.CachingDirectoryFactory; return new directory for /Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6 2.0/example/solr/collection1/data
+INFO  - 2014-01-20 19:50:11.784; org.apache.solr.core.SolrCore; New index directory detected: old=null new=/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6 2.0/example/solr/collection1/data/index/
+INFO  - 2014-01-20 19:50:11.785; org.apache.solr.core.CachingDirectoryFactory; return new directory for /Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6 2.0/example/solr/collection1/data/index
+INFO  - 2014-01-20 19:50:11.809; org.apache.solr.core.SolrCore; created json: solr.JSONResponseWriter
+INFO  - 2014-01-20 19:50:11.809; org.apache.solr.core.SolrCore; adding lazy queryResponseWriter: solr.VelocityResponseWriter
+INFO  - 2014-01-20 19:50:11.810; org.apache.solr.core.SolrCore; created velocity: solr.VelocityResponseWriter
+INFO  - 2014-01-20 19:50:11.815; org.apache.solr.core.SolrCore; created xslt: solr.XSLTResponseWriter
+INFO  - 2014-01-20 19:50:11.815; org.apache.solr.response.XSLTResponseWriter; xsltCacheLifetimeSeconds=5
+INFO  - 2014-01-20 19:50:11.910; org.apache.solr.core.SolrCore; no updateRequestProcessorChain defined as default, creating implicit default
+INFO  - 2014-01-20 19:50:11.923; org.apache.solr.core.RequestHandlers; created /select: solr.SearchHandler
+INFO  - 2014-01-20 19:50:11.924; org.apache.solr.core.RequestHandlers; created /query: solr.SearchHandler
+INFO  - 2014-01-20 19:50:11.926; org.apache.solr.core.RequestHandlers; created /get: solr.RealTimeGetHandler
+INFO  - 2014-01-20 19:50:11.927; org.apache.solr.core.RequestHandlers; created /browse: solr.SearchHandler
+INFO  - 2014-01-20 19:50:11.931; org.apache.solr.core.RequestHandlers; created /update: solr.UpdateRequestHandler
+WARN  - 2014-01-20 19:50:11.954; org.apache.solr.core.SolrResourceLoader; Solr loaded a deprecated plugin/analysis class [solr.JsonUpdateRequestHandler]. Please consult documentation how to replace it accordingly.
+INFO  - 2014-01-20 19:50:11.958; org.apache.solr.core.RequestHandlers; created /update/json: solr.JsonUpdateRequestHandler
+WARN  - 2014-01-20 19:50:11.963; org.apache.solr.core.SolrResourceLoader; Solr loaded a deprecated plugin/analysis class [solr.CSVRequestHandler]. Please consult documentation how to replace it accordingly.
+INFO  - 2014-01-20 19:50:11.964; org.apache.solr.core.RequestHandlers; created /update/csv: solr.CSVRequestHandler
+INFO  - 2014-01-20 19:50:11.964; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.extraction.ExtractingRequestHandler
+INFO  - 2014-01-20 19:50:11.965; org.apache.solr.core.RequestHandlers; created /update/extract: solr.extraction.ExtractingRequestHandler
+INFO  - 2014-01-20 19:50:11.966; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.FieldAnalysisRequestHandler
+INFO  - 2014-01-20 19:50:11.966; org.apache.solr.core.RequestHandlers; created /analysis/field: solr.FieldAnalysisRequestHandler
+INFO  - 2014-01-20 19:50:11.966; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.DocumentAnalysisRequestHandler
+INFO  - 2014-01-20 19:50:11.967; org.apache.solr.core.RequestHandlers; created /analysis/document: solr.DocumentAnalysisRequestHandler
+INFO  - 2014-01-20 19:50:11.969; org.apache.solr.core.RequestHandlers; created /admin/: solr.admin.AdminHandlers
+INFO  - 2014-01-20 19:50:11.972; org.apache.solr.core.RequestHandlers; created /admin/ping: solr.PingRequestHandler
+INFO  - 2014-01-20 19:50:11.975; org.apache.solr.core.RequestHandlers; created /debug/dump: solr.DumpRequestHandler
+INFO  - 2014-01-20 19:50:11.987; org.apache.solr.core.RequestHandlers; created /replication: solr.ReplicationHandler
+INFO  - 2014-01-20 19:50:11.987; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-20 19:50:11.987; org.apache.solr.core.RequestHandlers; created /spell: solr.SearchHandler
+INFO  - 2014-01-20 19:50:11.988; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-20 19:50:11.991; org.apache.solr.core.RequestHandlers; created /tvrh: solr.SearchHandler
+INFO  - 2014-01-20 19:50:11.993; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: org.apache.solr.handler.js.JavaScriptRequestHandler
+INFO  - 2014-01-20 19:50:11.993; org.apache.solr.core.RequestHandlers; created /js: org.apache.solr.handler.js.JavaScriptRequestHandler
+INFO  - 2014-01-20 19:50:11.993; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-20 19:50:11.993; org.apache.solr.core.RequestHandlers; created /terms: solr.SearchHandler
+INFO  - 2014-01-20 19:50:11.993; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-20 19:50:11.993; org.apache.solr.core.RequestHandlers; created /elevate: solr.SearchHandler
+INFO  - 2014-01-20 19:50:12.012; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2014-01-20 19:50:12.015; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2014-01-20 19:50:12.016; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2014-01-20 19:50:12.035; org.apache.solr.update.CommitTracker; Hard AutoCommit: if uncommited for 15000ms; 
+INFO  - 2014-01-20 19:50:12.035; org.apache.solr.update.CommitTracker; Soft AutoCommit: disabled
+INFO  - 2014-01-20 19:50:12.079; org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onInit: commits: num=2
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6 2.0/example/solr/collection1/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@321125d3; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_1,generation=1}
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6 2.0/example/solr/collection1/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@321125d3; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_5,generation=5}
+INFO  - 2014-01-20 19:50:12.079; org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 5
+INFO  - 2014-01-20 19:50:12.087; org.apache.solr.search.SolrIndexSearcher; Opening Searcher@50d09c79 main
+INFO  - 2014-01-20 19:50:12.096; org.apache.solr.handler.component.SpellCheckComponent; Initializing spell checkers
+INFO  - 2014-01-20 19:50:12.103; org.apache.solr.spelling.DirectSolrSpellChecker; init: {name=default,field=text,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+INFO  - 2014-01-20 19:50:12.110; org.apache.solr.handler.component.SpellCheckComponent; No queryConverter defined, using default converter
+INFO  - 2014-01-20 19:50:12.112; org.apache.solr.handler.component.QueryElevationComponent; Loading QueryElevation from: /Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6 2.0/example/solr/collection1/conf/elevate.xml
+INFO  - 2014-01-20 19:50:12.143; org.apache.solr.handler.ReplicationHandler; Commits will be reserved for  10000
+INFO  - 2014-01-20 19:50:12.144; org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@50d09c79 main{StandardDirectoryReader(segments_5:9:nrt)}
+INFO  - 2014-01-20 19:50:12.144; org.apache.solr.core.CoreContainer; registering core: collection1
+INFO  - 2014-01-20 19:50:12.146; org.apache.solr.servlet.SolrDispatchFilter; user.dir=/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6 2.0/example
+INFO  - 2014-01-20 19:50:12.147; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init() done
+INFO  - 2014-01-20 19:50:12.208; org.eclipse.jetty.server.AbstractConnector; Started SocketConnector@0.0.0.0:8983
+INFO  - 2014-01-20 19:50:12.234; org.apache.solr.core.SolrCore; [collection1] webapp=null path=null params={event=firstSearcher&q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false} hits=0 status=0 QTime=88 
+INFO  - 2014-01-20 19:50:12.235; org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2014-01-20 19:50:12.235; org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: default
+INFO  - 2014-01-20 19:50:12.242; org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: wordbreak
+INFO  - 2014-01-20 19:50:12.247; org.apache.solr.core.SolrCore; [collection1] Registered new searcher Searcher@50d09c79 main{StandardDirectoryReader(segments_5:9:nrt)}
+INFO  - 2014-01-21 23:33:13.514; org.eclipse.jetty.server.Server; Graceful shutdown SocketConnector@0.0.0.0:8983
+INFO  - 2014-01-21 23:33:13.518; org.eclipse.jetty.server.Server; Graceful shutdown o.e.j.w.WebAppContext{/solr,file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/example/solr-webapp/webapp/},/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6 2.0/example/webapps/solr.war
+INFO  - 2014-01-21 23:33:14.520; org.apache.solr.core.CoreContainer; Shutting down CoreContainer instance=1459185606
+INFO  - 2014-01-21 23:33:14.521; org.apache.solr.core.SolrCore; [collection1]  CLOSING SolrCore org.apache.solr.core.SolrCore@47ba9b32
+INFO  - 2014-01-21 23:33:14.521; org.apache.solr.update.DirectUpdateHandler2; closing DirectUpdateHandler2{commits=0,autocommit maxTime=15000ms,autocommits=0,soft autocommits=0,optimizes=0,rollbacks=0,expungeDeletes=0,docsPending=0,adds=0,deletesById=0,deletesByQuery=0,errors=0,cumulative_adds=0,cumulative_deletesById=0,cumulative_deletesByQuery=0,cumulative_errors=0}
+INFO  - 2014-01-21 23:33:14.522; org.apache.solr.update.SolrCoreState; Closing SolrCoreState
+INFO  - 2014-01-21 23:33:14.522; org.apache.solr.update.DefaultSolrCoreState; SolrCoreState ref count has reached 0 - closing IndexWriter
+INFO  - 2014-01-21 23:33:14.522; org.apache.solr.update.DefaultSolrCoreState; closing IndexWriter with IndexWriterCloser
+INFO  - 2014-01-21 23:33:14.534; org.apache.solr.core.SolrCore; [collection1] Closing main searcher on request.
+INFO  - 2014-01-21 23:33:14.535; org.apache.solr.core.CachingDirectoryFactory; Closing NRTCachingDirectoryFactory - 2 directories currently being tracked
+INFO  - 2014-01-21 23:33:14.545; org.apache.solr.core.CachingDirectoryFactory; looking to close /Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6 2.0/example/solr/collection1/data/index [CachedDir<<refCount=0;path=/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6 2.0/example/solr/collection1/data/index;done=false>>]
+INFO  - 2014-01-21 23:33:14.546; org.apache.solr.core.CachingDirectoryFactory; Closing directory: /Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6 2.0/example/solr/collection1/data/index
+INFO  - 2014-01-21 23:33:14.547; org.apache.solr.core.CachingDirectoryFactory; looking to close /Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6 2.0/example/solr/collection1/data [CachedDir<<refCount=0;path=/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6 2.0/example/solr/collection1/data;done=false>>]
+INFO  - 2014-01-21 23:33:14.547; org.apache.solr.core.CachingDirectoryFactory; Closing directory: /Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6 2.0/example/solr/collection1/data
+INFO  - 2014-01-21 23:33:14.550; org.eclipse.jetty.server.handler.ContextHandler; stopped o.e.j.w.WebAppContext{/solr,file:/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6%202.0/example/solr-webapp/webapp/},/Users/joao/Documents/MEI/IA/projecto_ia/solr-4.6 2.0/example/webapps/solr.war

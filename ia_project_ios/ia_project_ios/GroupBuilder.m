@@ -58,7 +58,8 @@
         [group setValue:received forKey:@"polarity"];
         
         received=[groupDic valueForKey:@"categories"];
-        [group setValue:received forKey:@"categories"];
+        NSArray *cat=[received componentsSeparatedByString:@";"];
+        [group setValue:cat forKey:@"categories"];
         
         
         [groups addObject:group];
