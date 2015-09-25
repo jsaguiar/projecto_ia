@@ -11,7 +11,7 @@ import java.util.Properties;
 
 
 public class Mail {
-    String pass = "wellcare";
+    String pass = "password";
 
 
     static boolean textIsHtml = false;
